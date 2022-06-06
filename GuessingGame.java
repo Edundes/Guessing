@@ -8,29 +8,27 @@ public class GuessingGame {
 		Scanner entrada = new Scanner(System.in);
 		Random aleatorio = new Random();
 
-		int num = aleatorio.nextInt(100);// Bloco de geração do número random
+		int num = aleatorio.nextInt(100);// Bloco de geraÃ§Ã£o do nÃºmero random
 		double tentativa = 0;
 		
-		System.out.print("Este é um jogo de quente e frio, informe um número de 1 a 100 e tente adivinhar \no número que foi gerado aleatoriamente, a cada erro, o programa vai informar \nmais, caso tiver informardo um número menor que o correto e menos se tiver informado um número maior\n\n");
-		System.out.println(num);
+		System.out.print("Este Ã© um jogo de quente e frio, informe um nÃºmero de 1 a 100 e tente adivinhar \no nÃºmero que foi gerado aleatoriamente, a cada erro, o programa vai informar \nmais, caso tiver informardo um nÃºmero menor que o correto e menos se tiver informado um nÃºmero maior\n\n");
+		
+		System.out.println(num); // O intuito de imprimir o resultado na tela no primeiro momento foi para que pudesse conferir se os resultados das condicionais estÃ£o certos
 
 		while (tentativa != num) {
 
-			System.out.print("Informe um número: ");
+			System.out.println("Informe um nÃºmero: ");
 			tentativa = entrada.nextInt();
 
 			if (tentativa == num) {
-
-				System.out.println("Acertou(Mizerávi)");
+				System.out.println("Acertou(MizerÃ¡vi)");
 			}
 
 			if (tentativa > num) {
-
 				System.out.println("Menos\n");
 			} 
 			
 			if (tentativa < num) {
-
 				System.out.println("Mais\n");
 			}
 
